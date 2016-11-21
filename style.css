@@ -1,0 +1,752 @@
+/********************************************************************************************************************************************************
+Name: Petrol
+Version: 1.0
+Author: Sandra Bermudez @ bulabe.com
+URL: http://petrolrefineria.com
+/*******************************************************************************************************************************************************/
+
+*, html, body, div, span, h1, h2, h3, h4, h5, h6, p, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, table, caption, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/********************************************************************************************************************************************************
+FONTS
+/********************************************************************************************************************************************************/
+
+@font-face {
+	font-family: 'ITCAvantGardeStd-Bk';
+	src: url('fonts/ITCAvantGardeStd-XLt.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ITCAvantGardeStd-Demi';
+	src: url('fonts/ITCAvantGardeStd-Demi.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/********************************************************************************************************************************************************
+COLOR GUIDE
+
+Blanco #fff
+Negro #000
+
+
+/********************************************************************************************************************************************************/
+
+/********************************************************************************************************************************************************
+BASICS: TAGS
+/********************************************************************************************************************************************************/
+
+body {
+	background-color: #fff;
+	color: #000;
+	font-family: 'ITCAvantGardeStd-Bk';
+	font-weight: 400;
+	text-align: center;
+	overflow-x: hidden;
+}
+
+h1, h2, h3 {
+	font-family: 'ITCAvantGardeStd-Demi';
+	font-weight: 400;	
+}
+
+p {
+	font-size: 16px;
+	line-height: 23px;
+	text-align: justify;
+	margin-bottom: 21px;
+}
+
+ul {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #666;
+	-webkit-transition: color 0.3s linear 0s;
+	-moz-transition: color 0.3s linear 0s;
+	-o-transition: color 0.3s linear 0s;			
+	transition: color 0.3s linear 0s;
+}
+
+a:link img, a:visited img, a:active img, a:hover img { 
+	border: none;
+	background-color: transparent;
+}
+
+::selection,
+::-moz-selection {
+	background: #fff;
+	color: #000;
+}
+
+strong {
+	font-family: 'ITCAvantGardeStd-Demi';
+	font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************************************************************
+LAYOUT
+/********************************************************************************************************************************************************/
+
+div#container {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	left: 0;
+	top: 10%;
+	overflow: hidden;
+}
+
+.floatl {
+	float: left;
+}
+
+.floatr {
+	float: right;
+}
+
+.clearfix {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************************************************************
+HEADER
+/********************************************************************************************************************************************************/
+
+#logoPetrol {
+	position: absolute;
+	bottom: 40%;
+	left: 50%;
+	margin: 0 0 0 -245px;
+}
+
+div#menu {
+	width: 100%;
+	height: 80%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background-color: #fff;
+}
+
+ul#nav {
+	list-style-type: none;
+	width: 830px;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin: 0 0 0 -380px;
+}
+
+ul#nav li a:link, ul#nav li a:visited, ul#nav li a:active {
+	font-size: 21px;
+	display: inline;
+	float: left;
+	margin: 0 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************************************************************
+/********************************************************************************************************************************************************/
+
+div#anuncio {
+	width: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -120px 0 0 -100px;
+	z-index: 991;
+}
+
+div#anuncio img {
+	margin: 0 0 20px 0;
+}
+
+div#anuncio p {
+	color: #333;
+	text-align: center;
+}
+
+
+
+
+
+
+#fotos {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	cursor: hand;
+	z-index: 989;
+}
+
+#fotos img {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	-webkit-mask: url('images/mask.png') no-repeat center center;
+	-webkit-mask-size: 200%;
+	z-index: 990;
+}
+
+
+
+
+
+
+
+
+#anterior {
+	width: 45%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1030;
+	cursor: hand;
+	color: red;
+	text-align: left;
+}
+
+@-webkit-keyframes loop_frames_in {
+     0% { -webkit-mask-size: auto 0%; }
+     100% { -webkit-mask-size: auto 200%; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************************************************************
+-- FOOTER 
+/********************************************************************************************************************************************************/
+
+#footer {
+	width: 820px;
+	position: fixed;
+	left: 50%;
+	bottom: 35px;
+	margin: 0 0 0 -410px;
+	z-index: 10000;
+}
+
+#footer h2 {
+	margin-bottom: 8px;
+}
+
+#footer h2,
+#footer a:link, #footer a:visited, #footer a:active {
+	font-family: 'ITCAvantGardeStd-Bk';
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+#footer a:hover {
+	color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************************************************************
+CLASES
+********************************************************************************************************************************************************/
+
+
+
+#test {
+	position: fixed;
+	bottom: 0;
+	z-index: 2099;
+	background: red;
+	padding: 50px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************************************************************
+C ADMIN
+/********************************************************************************************************************************************************/
+
+
+div#wrap {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 0 0 120px 0;
+}
+
+form#myform {
+	width: 500px;
+	text-align: left;
+	margin: 60px auto 20px auto;
+}
+
+form#myform label {
+	display: block;
+	width: 80px;
+	font-family: 'ITCAvantGardeStd-Bk';
+	font-size: 18px;
+	text-align: left;
+	margin: 8px 0 0 0;
+	float: left;
+}
+
+form#myform input {
+	background-color: #ccc;
+	color: #000;
+	font-family: 'ITCAvantGardeStd-Bk';
+	font-size: 18px;
+	font-weight: 500;
+	padding: 6px;
+	margin: 5px 0 5px 20px;
+	width: 380px;
+	border-radius: 5px 5px;
+}
+
+form#myform input#submit {
+	width: 80px;
+	font-family: 'ITCAvantGardeStd-Bk';
+	float: right;
+	margin: 12px 18px 0 0;
+	height: 40px;
+	line-height: 35px;
+}
+
+form#myform input:focus, 
+form#myform textarea:focus,
+form#myform input#submit:hover {
+	background-color: #ffcc00;
+}
+
+form#contenido label {
+	display: block;
+	font-family: 'ITCAvantGardeStd-Bk';
+	font-size: 18px;
+	text-align: left;
+	margin: 4px 0;
+}
+
+form#contenido input {
+	margin: 12px 0;
+	clear: both;
+}
+
+form#contenido select {
+	display: block;
+	clear: both;
+	width: 180px;
+	margin: 12px 0 18px 0;
+}
+
+form#contenido input#orden {
+	display: block;
+	width: 80px;
+	height: 40px;
+	border-radius: 6px;
+	padding: 12px;
+	color: #000;
+	font-family: 'ITCAvantGardeStd-Demi';
+	background-color: #ccc;
+	margin: 4px 0 16px 0;
+	line-height: 30px;
+}
+
+form#contenido input#boton {
+	display: block;
+	width: 90px;
+	height: 40px;
+	border-radius: 6px;
+	color: #fff;
+	font-family: 'ITCAvantGardeStd-Demi';
+	background-color: #333;
+	margin: 16px 0;
+	line-height: 30px;
+}
+
+form#contenido input#boton:hover {
+	background-color: #ffcc00;
+}
+
+
+
+
+
+ul#nav2 {
+	list-style-type: none;
+	width: 600px;
+	float: right;
+	margin: 80px 0 0 0;
+}
+
+ul#nav2 li a:link, ul#nav2 li a:visited, ul#nav2 li a:active {
+	font-family: 'ITCAvantGardeStd-Demi';
+	font-size: 18px;
+	display: inline;
+	float: left;
+	margin: 0 10px;
+}
+
+ul#nav2 li#sort a {
+	color: #ff0000;
+}
+
+ul#nav li a:hover {
+
+}
+
+
+
+
+
+
+a#nimagen:link, a#nimagen:visited, a#nimagen:active {
+	display: block;
+	width: 280px;
+	height: 60px;
+	background-color: #ccc;
+	border-radius: 12px;
+	font-size: 22px;
+	color: #000;
+	text-align: center;
+	line-height: 65px;
+	margin: 10px 20px 30px 0;
+	float: right;
+}
+
+a#nimagen:hover {
+	background-color: #ffcc00;
+}
+
+
+a#cancelar:link, a#cancelar:visited, a#cancelar:active {
+	font-family: 'ITCAvantGardeStd-Demi';
+	color: red;
+	text-decoration: underline;
+	margin: 10px 20px 30px 0;
+	float: right;
+}
+
+a#cancelar:hover {
+	color: #000;
+}
+
+
+
+
+
+div#wrap h1 {
+	font-size: 18px;
+}
+
+div#wrap h2 {
+	font-size: 16px;
+	margin: 6px 0;
+}
+
+
+
+
+
+
+div.cadmin_cat {
+	display: block;
+	width: 420px;
+	height: 380px;
+	background: #ccc;
+	float: left;
+	margin: 10px;
+	padding: 15px;
+	overflow: hidden;
+}
+
+div.cadmin_cat img {
+	margin: 0 0 20px 0;
+}
+
+div.cadmin_cat p {
+	font-size: 22px;
+	margin: 0 0 10px 0;
+}
+
+
+
+
+
+
+
+form.form_ord {
+	margin: 0 0 26px 0;
+}
+
+form.form_ord label {
+	float: left;
+	font-size: 21px;
+	padding: 5px 0 0 0;
+}
+
+form.form_ord input.num {
+	display: block;
+	width: 50px;
+	height: 30px;
+	background: #ececec;
+	padding: 4px;
+	float: left;
+	margin: 0 10px;
+	border: 1px solid #fff;
+}
+
+form.form_ord input.submit {
+	font-family: 'ITCAvantGardeStd-Demi';
+	color: #000;
+	text-decoration: underline;
+	padding: 8px 0 0 0;
+	margin: 0 0 0 10px;
+}
+
+form.form_ord input.submit:hover {
+	color: red;
+}
+
+a.editar:link, a.editar:visited, a.editar:active {
+	font-family: 'ITCAvantGardeStd-Demi';
+	color: #000;
+	text-decoration: underline;
+	margin: 0;
+	display: block;
+}
+
+a.editar:hover {
+	color: #000;
+}
+
+a.borrar:link, a.borrar:visited, a.borrar:active {
+	font-family: 'ITCAvantGardeStd-Demi';
+	color: red;
+	text-decoration: underline;
+	margin: 10px 0 0 0;
+	display: block;
+}
+
+a.borrar:hover {
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.mt30 {
+	margin-top: 30px;
+}
+
+
+
+
+
+
+
+
